@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
-}
+/* inspired by: https://codepen.io/dudleystorey/pen/LYyrdO */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html, body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
+  margin: 50px;
+}
+
+/* .big-button {
+  background-color: red;
   color: white;
+  border-radius: 50%;
+
+} */
+
+.big-button {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  font-family: Avenir, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  background: red;
+  text-shadow: 0 3px 1px rgba(122,17,8,.8);
+  box-shadow: 0 8px 0 rgb(183,9,0),
+    0 15px 20px rgba(0,0,0,.35);
+  text-transform: uppercase;
+  transition: .4s all ease-in;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+button span { position: relative; }
+/* fix for IE 11 (and IE8+, although the earlier versions are harder to address) stupidly moving the inner button text on click */
+.big-button:active {
+  padding-top: 3px;
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 rgb(183,0,0),
+    0 8px 6px rgba(0,0,0,.45);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.case {
+  background-color: black;
+  border-radius: 50%;
+  width: 255px;
+  height: 245px;
 }
